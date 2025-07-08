@@ -3,12 +3,11 @@ import classes from "./Footer.module.css";
 
 const Footer = () => {
     return (
-        <div>
             <footer className={classes.vertical}>
                 
-                <hr className={classes.topLine}/>
+                {/* <hr className={classes.topLine}/> */}
                 
-                <h2>Surf Enhancer v1.0</h2> 
+                <h2>TrySurfNow v1.0</h2> 
                 <div className={classes.row}>
                     <a href="/">Home</a>
                     {/* <a href="/">About</a>
@@ -36,7 +35,6 @@ const Footer = () => {
                 </div>
                 
                         </footer>
-        </div>
     );
 };
 

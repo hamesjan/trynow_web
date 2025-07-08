@@ -1,7 +1,9 @@
 import "./Background.css";
 
 const Background = () => {
-  return <div className="background__div"></div>;
+  return <div className="background"></div>;
+
+
 };
 
 export default Background;

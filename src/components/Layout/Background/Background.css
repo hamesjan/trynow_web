@@ -1,8 +1,21 @@
-.background__div{
+/* .background__div{
     position: absolute;
     z-index: -1;
     height: 100%;
     width: 100%;
     top: 0;
     background-color:#FFFFFF;
+} */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../../assets/ui_background.png'); /* use ./assets/... if importing from src */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }

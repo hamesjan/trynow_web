@@ -6,12 +6,16 @@ import out from "../../assets/out.gif";
 const InfoPage = () => {
   return (
     <div className={classes.outer_div}>
-      This tool was made for fun. Have fun with it. No seriously. I'm being dead
-      serious. <br />
-      It is not very responsive to mobile devices so try on a desktop or laptop
-      if it's buggy.
+      <p style={{textAlign: "left", fontSize: "40px", marginLeft: "30px"}}>
+      When you need to scope the waves but you don't want to pay
+      <br/>
+      When you want to surf, but you don't want to get up from bed
+      <br/> 
+      When ur bored at school or work 
+      <br/>
+      When you love the beach
+    </p>
       <br />
-      <b> This is what it does.</b>
       <div className={classes.vid_demo}>
         <img width={300} height={200} src={first} alt="loading..." />
         <svg
@@ -24,22 +28,7 @@ const InfoPage = () => {
         </svg>
         <img width={300} height={200} src={out} alt="loading..." />
       </div>
-      <br />
-      It is still a work in progress so give me some time and I'll make it
-      awesome.
-      <br />
-      <br />
-      <b style={{ color: "red" }}>
-        PRO TIP: if the optical flow isn't working correctlty, try setting the
-        starting box a little down the line from where the you takes off.
-      </b>
-      <br />
-      <br />
-      Tech Stack is React and Flask
-      <br /> Yall dont know how to react and do the dash
-      <br /> Spit some bars and get that cash
-      <br /> Follow me on Insta @hamesjan and my Twitter @Skcurf
-      <br />
+
       <br />
       <img width={200} height={100} src={wgif} alt="loading..." />
     </div>

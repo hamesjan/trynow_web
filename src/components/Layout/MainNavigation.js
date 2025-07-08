@@ -6,7 +6,7 @@ const MainNavigation = (props) => {
     <div>
       <header className={classes.header}>
         <Link className={classes.site_title} to="/home">
-          Surfen
+          TrySurfNow
         </Link>
         <div style={{ flex: 1 }} />
         <nav className={classes.site_nav}>
