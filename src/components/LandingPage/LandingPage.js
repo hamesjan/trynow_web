@@ -5,6 +5,7 @@ import classes from "./LandingPage.module.css";
 import axios from "axios";
 import VideoSelectionModal from "../CornerSelecttion/VideoSelectionModal";
 import ReactPlayer from "react-player";
+import VideoViewer from "../VideoViewer/VideoViewer";
 
 
 const LandingPage = () => {
@@ -88,12 +89,8 @@ const LandingPage = () => {
         <div className={classes.video_box}>
               <p style={{ marginLeft: "10px" }}>{now.toLocaleString()}</p>
            <div className={classes.camera_container}>
-            <img
-              src="http://192.168.1.174:8000" // replace with your Pi's actual IP if different
-              // src="https://camera-stream.fly.dev/stream" // replace with your Pi's actual IP if different
-              alt="Live MJPEG Stream"
-              className={classes.camera_stream}
-            />
+            <VideoViewer/>
+
           </div>
         </div>
       </div>
