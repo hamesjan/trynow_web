@@ -1,21 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import classes from "./LandingPage.module.css";
-// import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-// import fireStorage from "../../firebaseConfig";
-import axios from "axios";
-import VideoSelectionModal from "../CornerSelecttion/VideoSelectionModal";
-import ReactPlayer from "react-player";
 import VideoViewer from "../VideoViewer/VideoViewer";
+import VideoSidebar from "./VideoSideBar/VideoSideBar";
+import ControlPanel from "./ControlPanel/ControlPanel";
 
 
 const LandingPage = () => {
   const [outVidLink, setOutVidLink] = useState("");
-  const [now, setNow] = useState(new Date());
 
-  useEffect(() => {
-    const timer = setInterval(() => setNow(new Date()), 1000);
-    return () => clearInterval(timer); // cleanup
-  }, []);
 
   //
 
@@ -83,16 +75,16 @@ const LandingPage = () => {
 
   return (
     <div className={classes.outer_div}>
-      <div className={classes.info_header}>
-        <p style={{fontSize: "40px"}}>TrySurfNow is a clip farm</p>
-      </div>
-        <div className={classes.video_box}>
-              <p style={{ marginLeft: "10px" }}>{now.toLocaleString()}</p>
-           <div className={classes.camera_container}>
+      <div style={{ display: 'flex', justifyContent:"space-between", width: "100%" }}>
+          <div className={classes.video_box}>
             <VideoViewer/>
-
+            <ControlPanel/>
+            <div className={classes.info_header}>
+              <p style={{fontSize: "40px"}}>TrySurfNow is a clip farm</p>
+            </div>
+            </div>
+                <VideoSidebar />
           </div>
-        </div>
       </div>
   );
 };

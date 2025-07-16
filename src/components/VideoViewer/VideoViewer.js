@@ -5,6 +5,13 @@ const VideoPlayer = () => {
   const videoRef = useRef(null);
   const playerRef = useRef(null);
   const [error, setError] = useState(null);
+  const [now, setNow] = useState(new Date());
+  
+
+   useEffect(() => {
+      const timer = setInterval(() => setNow(new Date()), 1000);
+      return () => clearInterval(timer); // cleanup
+    }, []);
 
   useEffect(() => {
     // Check if the browser supports MSE
@@ -18,7 +25,7 @@ const VideoPlayer = () => {
       {
         type: 'mpegts',
         isLive: true,
-        url: 'ws://54.241.79.228:8082/',
+        url: 'ws://52.53.192.72:8082/',
       },
       {
         enableWorker: true, // Use Web Worker for better performance
@@ -56,17 +63,26 @@ const VideoPlayer = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Live Stream</h2>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      <video
-        ref={videoRef}
-        controls
-        autoPlay
-        muted
-        style={{ width: '100%', maxWidth: '800px' }}
-      />
-    </div>
+    <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center'
+}}>
+  <p>{now.toLocaleString()}</p>
+  {/* {error && <div style={{ color: 'red' }}>{error}</div>} */}
+  <video
+    ref={videoRef}
+    controls
+    autoPlay
+    muted
+    style={{
+      width: '640px',
+      height: "480px",
+      // maxWidth: '800px'
+    }}
+  />
+</div>
   );
 };
 

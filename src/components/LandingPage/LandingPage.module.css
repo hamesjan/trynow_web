@@ -1,27 +1,12 @@
 .outer_div{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .info_header{
   text-align: center;
   margin-bottom: 4cqh;
-}
-
-.video_box {
-  width: 400px;
-  height: 300px;
-}
-
-.camera_container {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #eef6f8;
-  z-index: 0;
+  
 }
 
 .camera_stream {
@@ -31,6 +16,10 @@
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+.video_box{
+  margin-left: 10%;
 }
 
 @media (max-width: 600px) {
@@ -47,11 +36,6 @@
     text-align: center;
     height: auto;
     padding: 1rem;
-  }
-
-  .no_video_box{
-    position: inherit;
-    margin-left: 50px;
   }
 
   .info_header{
